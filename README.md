@@ -23,3 +23,11 @@ Click [here](https://github.com/StephenGrider/ReactStarter/releases) then downlo
 > npm install
 > npm start
 ```
+![redux flow](./img/redux_flow.png)
+
+1. User clicks #2 - call action creator
+2. Action creator returns an action
+3. Action automatically sent to all reducers
+4. activeBook property on state set to the value returned from the active book reducer
+5. All reducers processed the action and returned new state. New state has been assembled. Notify containers of the changes to state. 
+On notification, containers will rerender with new props.
