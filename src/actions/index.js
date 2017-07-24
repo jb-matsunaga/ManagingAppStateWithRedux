@@ -1,3 +1,8 @@
 export function selectBook(book) {
-    console.log('a book has been selected:', book.title);
+    // selectBookはActionCreatorであり、アクションを返す必要がある
+    // typeプロパティを持つオブジェクト
+    return {
+        type: 'BOOK_SELECTED',
+        payload: book
+    };
 }
